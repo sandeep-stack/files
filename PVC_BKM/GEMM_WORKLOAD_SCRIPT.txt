@@ -1,0 +1,30 @@
+#pallavi
+ratio10_ovrd0 =["fuses.gt_gfx_gt_c0_r3.gtip_base_fuse_fuse_gt_compute_dss_en= 0x184424140c601448"]
+ratio10_ovrd1 = ["fuses.gt_gfx_gt_c0_r3.gtip_base_fuse_fuse_gt_compute_dss_en= 0x222400009009a028"]  (Please note on this setup Tile 2 doesn’t have DSS enabled in 2 slices)
+b.go(recipes=['user_custom.gpsb_mdfic_mdfi_warmreset','user_custom.anr_disable_recipe'], fusestr0=ratio10_ovrd0, fusestr1=ratio10_ovrd1, fusefiles=[r"C:\PythonSV\pontevecchio\toolext\bootscript\fusefiles\PVC\A0_2T\Debug\SkHynix8h2p8.xml"] )
+
+
+
+#900MHz
+
+b.go(gotil="prepare_for_loop",recipes=['user_custom.gpsb_mdfic_mdfi_warmreset','user_custom.anr_disable_recipe'],fusestr=["fuses.punit.pcode_gt_p0_ratio=0x12","fuses.punit.pcode_gt_p0_ratio_media_ff=0x12","fuses.punit.pcode_gt_p0_ratio_systolic=0x12","fuses.punit.pcode_gt_p0_ratio_compute = 0x12", "fuses.punit.pcode_gt_p1_ratio=0x12","fuses.punit.pcode_gt_p1_ratio_systolic=0x12","fuses.punit.pcode_gt_p1_ratio_media_ff=0x12","fuses.punit.pcode_gt_p1_ratio_compute=0x12","fuses.punit.pcode_gt_pn_ratio=0x12","fuses.punit.pcode_gt_min_ratio=0x12", "fuses.punit.pcode_gt_p0_ratio_chiplet_ifc = 0x1B"])    
+
+
+# pallavi +900 mhz
+
+ratio10_ovrd0 =["fuses.gt_gfx_gt_c0_r3.gtip_base_fuse_fuse_gt_compute_dss_en=0x184424140c601448"]
+ratio10_ovrd1 = ["fuses.gt_gfx_gt_c0_r3.gtip_base_fuse_fuse_gt_compute_dss_en=0x222400009009a028"]
+b.go(gotil="prepare_for_loop",recipes=['user_custom.gpsb_mdfic_mdfi_warmreset','user_custom.anr_disable_recipe'] ,fusestr0=ratio10_ovrd0, fusestr1=ratio10_ovrd1, fusefiles=[r"C:\PythonSV\pontevecchio\toolext\bootscript\fusefiles\PVC\A0_2T\Debug\SkHynix8h2p8.xml"],fusestr=["fuses.punit.pcode_gt_p0_ratio=0x12","fuses.punit.pcode_gt_p0_ratio_media_ff=0x12","fuses.punit.pcode_gt_p0_ratio_systolic=0x12","fuses.punit.pcode_gt_p0_ratio_compute = 0x12", "fuses.punit.pcode_gt_p1_ratio=0x12","fuses.punit.pcode_gt_p1_ratio_systolic=0x12","fuses.punit.pcode_gt_p1_ratio_media_ff=0x12","fuses.punit.pcode_gt_p1_ratio_compute=0x12","fuses.punit.pcode_gt_pn_ratio=0x12","fuses.punit.pcode_gt_min_ratio=0x12", "fuses.punit.pcode_gt_p0_ratio_chiplet_ifc = 0x1B"])  
+
+sv.gfxcard0.tiles.gfx.gtgp.pll_sel.link_pll_sel 
+sv.gfxcard0.tile0.gfx.gtgp.pll_sel.link_pll_sel=1
+b.cont()
+from pontevecchio.users.karthik import PLL_status as plls
+sv.gfxcard0.tile0.uncore.iosfpll.iosfpll_0.clockgen_cr.clki_dword0.pll_ratio
+sv.gfxcard0.tile0.uncore.iosfpll.iosfpll_1.clockgen_cr.clki_dword0.pll_ratio
+sv.gfxcard0.tile0.uncore.iosfpll.iosfpll_1.clockgen_cr.clki_status_dword2.pll_lock_finalh
+  
+
+
+
+

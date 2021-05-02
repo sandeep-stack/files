@@ -1,0 +1,9 @@
+#!/bin/bash
+# This is for running VPP Scenarios
+
+MSDK/lin_x64/bin/./sample_vpp -lib hw -scc nv12 -sw 1280 -sh 720 -sf 30 -dcc nv12 -df 30 -rotate 90 -d3d -i Source/VPP/720p50_mobcal_5s_30fps.yuv -o Results/VPP/720p50_mobcal_5s_30fps_rotate90.yuv >> /home/testuser/PVC_PO_OSBV/log_files/VPP/mobcal_logs.txt
+
+MSDK/lin_x64/bin/./sample_vpp -lib hw -scc nv12 -sw 4096 -sh 2160 -sf 60 -dcc nv12 -dw 1920 -dh 1080 -df 60 -i Source/VPP/BarScene_4K_60fps_8bit_420_5s.yuv -o Results/VPP/BarScene_4K_60fps_8bit_420_5s_1080p_out.yuv >> /home/testuser/PVC_PO_OSBV/log_files/VPP/BarSCENE_4k_logs.txt
+
+
+MSDK/lin_x64/bin/./sample_vpp -lib hw -scc nv12 -sw 1920 -sh 1080 -sf 60 -dcc nv12 -dw 4096 -dh 2160 -df 60 -i Source/VPP/Toddler_2K_60fps_8bit_420_5s.yuv -o Results/VPP/Toddler_2K_60fps_8bit_420_5s_4K_out.yuv >> /home/testuser/PVC_PO_OSBV/log_files/VPP/Toddler_2K_logs.txt

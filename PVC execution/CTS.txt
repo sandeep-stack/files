@@ -1,0 +1,7 @@
+../CTS/AubLoad -device pvc:2tx8x8x8:a0 ccsEnableMask=0x0 rcsEnableMask=0x0 -targetconfig ./PVC_Platform_config_2tile_8GB.xml -enableFeature 1408921788 -enablefeature 1409400390 -enablefeature 1406907150 2203915042 -socket tcp:0
+
+
+CTS query for  PVC : SELECT * FROM TestView WHERE (Context IN('OSBV_PVC_A0')) AND (Config IN('2T_Silicon_1024eu_Volume_UM','Silicon_1024eu_Volume_UM_MultiDevice')) AND (RunStatus != 'Waived')
+
+CTS ::lspci | grep 'Display
+sudo lspci -vs 6d:0

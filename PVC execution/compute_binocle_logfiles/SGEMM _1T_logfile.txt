@@ -1,0 +1,36 @@
+Version: git-c4468ec2
+App path = ./
+
+option --ocl_online_mode is true
+option --preload_ref_matrix is false
+option --dump_ref_matrix is false
+option --skip_validation is false
+M= 256
+K= 32
+N= 256
+eu_count= 4
+MTile_selection123= 1
+outloop_per_tg_sync= 3
+mtile_height= 1
+REP_COUNT= 1
+atomic_poll_interval= 128
+kernel computes 64x256 matrix using 1 workgroup of 16 threads
+DEBUG: candidateW0=1
+DEBUG: best1st_machineTileWidth=1
+Kernel wave =4
+Machine tile [height, width] = [1, 1]
+Workload [height, width] = [4, 1]
+localsize= 4 4
+globalsize= 4 4
+thread_space= 4 4
+group_space= 1 1
+outloop_per_tg_sync= 3
+Execute kernel .. 
+Execute kernel iteration 0...
+Executed 4194304 ops.
+
+========
+ -- done executing
+first ref=0.223255, kernel=0.223255, index=0
+
+*** TEST PASSED ***

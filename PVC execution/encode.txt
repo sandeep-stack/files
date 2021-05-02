@@ -1,0 +1,6 @@
+#!/bin/bash
+# This is for running Encodes
+
+MSDK/lin_x64/bin/./mfx_transcoder -i Source/Encode/Dancers_4K_60fps_8bit_420_5s.yuv -h264 -U 4 -LowPower on -qpi 26 -qpp 28 -qpb 30 -w 4096 -h 2160 -f 60 -no_render -hw -priority 1 -perf_opt -d3d -o Results/Encode/Dancers_4K_60fps_8bit_420_5s_avc_out.264 >> /home/testuser/PVC_PO_OSBV/log_files/encode/Transcoder/crosswalk.txt
+
+MSDK/lin_x64/bin/./mfx_transcoder -i Source/Encode/Dancers_4K_60fps_8bit_420_5s.yuv -h265 -U 4 -LowPower on -qpi 26 -qpp 28 -qpb 30 -w 4096 -h 2160 -f 60 -no_render -hw -priority 1 -perf_opt -d3d -o Results/Encode/Dancers_4K_60fps_8bit_420_5s_hevc_out.265

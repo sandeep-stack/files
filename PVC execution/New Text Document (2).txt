@@ -1,0 +1,28 @@
+AVC Decode 1080p
+HEVC Decode 4K
+VP9 Decode 4K
+AV1 Decode (2-1080p,4K)
+
+AVC VDEnc Encode
+HEVC VDEnc Encode
+
+VDEnc Transcodes
+AVC -->> HEVC
+HEVC -->> AVC
+
+VPP
+720p Rotate 90 degree
+Scaling
+* 4K to 1080p
+* 1080p to 4K
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~

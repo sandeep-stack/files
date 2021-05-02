@@ -1,0 +1,36 @@
+Reading the config file from config.txt
+Reading  Config Data ...
+
+
+**********************************************************************************************
+rootdevie= 0    LOCAL_X_DIM=512  GLOBAL_X_DIM=2048 RUN_ON_SUB_DEVICE=-1 CREATE_MEM_ON_SUB_DEVICE=-1 MULTI_TILE=-1 MULTI_CONTEXT=0
+MULTI_ENGINE=0  RUN_ON_THIS_ENGINE=CCS0  RUN_ALL_TESTS=0  TEST_ID=4 CACHE_CONTROL=1 BufferSize=268435456
+************************************************************************************************
+Driver does not support the 0x20a PCI ID.
+Number of available platforms: 2
+
+Selected platform: Intel(R) OpenCL HD Graphics
+
+Found root device 0 with 2 sub devices (tiles)
+
+Available devices:
+
+0: DEVICE_NAME: Intel(R) Graphics [0x020a]
+        0.1 HARDWARE_VERSION: OpenCL 3.0 NEO
+        0.2 SOFTWARE_VERSION: 20.48.018530+embargo372
+        0.3 OPENCL_C_VERSION: OpenCL C 1.2
+        0.4 MAX_COMPUTE_UNITS: 960
+Running in built test
+Setting OpenCL Platform ...
+
+Running the execution on rootDevice 0
+Creating And Building OpenCL Program ...
+
+Creating Buffer with CACHED_RESOURCE and ignoring createBufferOnSubDevice
+allocating 268435456 bytes from deviceId 0x603decd0
+Created buffer of 268435456 bytes in rootDevice 1
+Running InBuilt Test ...
+
+Running Test 4 : Moving Inversion Random Pattern
+
+Test 4 finished in 0.058078 seconds
