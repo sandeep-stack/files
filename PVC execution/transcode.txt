@@ -1,6 +1,0 @@
-#!/bin/bash
-# This is for running Transcodes
-
-MSDK/lin_x64/bin/./sample_multi_transcode -i::h264 Source/Transcode/Square_1080p_60fps_8bit_420_5s.264 -lowpower:on -cqp -qpi 26 -qpp 28 -qpb 30 -o::h265 Results/Transcode/Square_1080p_60fps_8bit_420_5s_avc_hevc.265
-
-MSDK/lin_x64/bin/./sample_multi_transcode -i::h265 Source/Transcode/Crosswalk_4K_60fps_8bit_420_5s.265 -lowpower:on -cqp -qpi 26 -qpp 28 -qpb 30 -o::h264 Results/Transcode/Crosswalk_4K_60fps_8bit_420_5s_hevc_avc.264  >> /home/testuser/PVC_PO_OSBV/log_files/Transcode/crosswalk.txt
