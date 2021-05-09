@@ -1,0 +1,17 @@
+1)https://hsdes.intel.com/appstore/article/#/16013290288  14467 HCP_BENCH_OCL comb16
+
+above hsd applicabe for 14472,14482 also 
+
+SELECT * FROM TestView WHERE (Context IN('OSBV_PVC_A0')) AND (TestListID IN (14467,14101,14472,14482,14486))
+
+
+
+2)https://hsdes.intel.com/appstore/article/#/16013290804  for 14101 HCP_Bench_ocl
+
+
+3) https://hsdes.intel.com/appstore/article/#/16013290857 link for 14486  query in line3
+
+
+4)HSD for luxmark2 cases i.e,13821 ,13818
+
+5) for GEMM +combination failures :https://hsdes.intel.com/appstore/article/#/16013291261
